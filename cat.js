@@ -26,3 +26,30 @@
 
   $closeMenu.on('click', closeMenu);
 })();
+
+
+/*up*/
+(function() {
+  const scrollBtt = document.querySelector(".btt");
+  const bttVisibility = () => {
+    if (window.scrollY > 400) {
+        scrollBtt.style.visibility = "visible";
+    } else {
+        scrollBtt.style.visibility = "hidden";
+    }
+};
+document.addEventListener("scroll", () => {
+  bttVisibility();
+});
+scrollBtt.addEventListener("click", () => {
+  window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+  });
+});
+
+
+
+
+  
+})();

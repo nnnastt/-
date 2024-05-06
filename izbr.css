@@ -581,3 +581,66 @@ input:checked + label span {
     }
   
   }
+
+      /* up */
+      .scroll-to-top {
+        position: relative;
+      }
+      
+      .btt-position {
+        position: fixed;
+        bottom: 40px;
+        right: 25px;
+        z-index: 20;
+      }
+      
+      .btt-style {
+        background-color: #ff0000;
+        border: 2px solid #ff0000;
+        border-radius: 50%;
+        height: 50px;
+        width:50px;
+        color: #fff;
+        cursor: pointer;
+        animation: movebtn 3s ease-in-out infinite;
+        transition: all 0.5s ease-in-out;
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+      }
+    
+      .icon-style:hover {
+        animation: none;
+        background: #fff;
+        color: #ac2626;
+        border: 2px solid #ac2626;
+      }
+      
+      @keyframes movebtn {
+        0% {
+          transform: translateY(0px);
+        }
+        25% {
+          transform: translateY(20px);
+        }
+        50% {
+          transform: translateY(0px);
+        }
+        75% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+    
+      @media (max-width: 1000px) {
+        .btt-style{
+          height: 30px;
+          width: 30px;
+          font-size: 20px;
+        }
+        
+      }
