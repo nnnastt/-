@@ -192,13 +192,16 @@ header {
 
 .soon{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 0fr);
     justify-content: center;
-    gap: 20px; 
     
 }
 
 .card-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 350px;
+  width: 100%;
   margin: 10px;
 }
 @media (max-width: 1900px) {
@@ -220,17 +223,20 @@ header {
   }
 }
 .card {
-    width: 100%;
-    height: auto;
+    position: absolute;
+    /* margin: 20px;
+    padding: 25px; */
+    width: 450px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     transition: all 0.3s;
     position: relative;
-    overflow: hidden;
    
     .img-wrapper {
-      height: 60%; /* Высота области с изображением */
-      overflow: hidden;
+        position: relative;
+        margin: 10px; 
+        height: 230px;
 
         img {
             height: 100%;
